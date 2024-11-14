@@ -28,5 +28,5 @@ document.getElementById("btnSubmit").onclick = function () {
     let thuePhaiTra = tinhThuNhapChiuThue(thuNhapChiuThue);
     document.getElementById(
       "output"
-    ).textContent = `Họ tên: ${hoTen}\n Thu nhập hàng năm: ${tongThuNhap} VND\nThu nhập chịu thuế: ${thuNhapChiuThue.toLocaleString()} VND\nThuế phải trả:${thuePhaiTra.toLocaleString()} VND`;
+    ).innerHTML = `Họ tên: ${hoTen} <br> Thu nhập hàng năm: ${tongThuNhap} VND <br>Thu nhập chịu thuế: ${thuNhapChiuThue.toLocaleString()} VND <br>Thuế phải trả:${thuePhaiTra.toLocaleString()} VND`;
 };
