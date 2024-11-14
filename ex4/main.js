@@ -1,16 +1,16 @@
 function calculateCost() {  
-    var customerCode = document.getElementById('customerCode').value;  
-    var customerType = document.getElementById('customerType').value;  
-    var connections = parseInt(document.getElementById('connections').value);  
+    var idKhachHang = document.getElementById('idKhachHang').value;  
+    var loaiKhachHang = document.getElementById('loaiKhachHang').value;  
+    var soKetNoi = parseInt(document.getElementById('soKetNoi').value);  
     var totalCost = 0;  
 
-    if (customerType === "Nhà dân") {  
-        totalCost = 4.5 + 20.5 + (7.5 * connections);  
-    } else if (customerType === "Doanh nghiệp") {  
-        if (connections <= 10) {  
-            totalCost = 15 + 75 + (50 * connections);  
+    if (loaiKhachHang === "Nhà dân") {  
+        totalCost = 4.5 + 20.5 + (7.5 * soKetNoi);  
+    } else if (loaiKhachHang === "Doanh nghiệp") {  
+        if (soKetNoi <= 10) {  
+            totalCost = 15 + 75 + (50 * soKetNoi);  
         } else {  
-            totalCost = 15 + (75 + (connections - 10) * 5) + (50 * connections);  
+            totalCost = 15 + (75 + (soKetNoi - 10) * 5) + (50 * soKetNoi);  
         }  
     } else {  
         document.getElementById('result').innerText = "Loại khách hàng không hợp lệ.";  
@@ -18,5 +18,5 @@ function calculateCost() {
     }  
 
     document.getElementById('result').innerText =   
-        `Tổng chi phí cho khách hàng ${customerCode} là: $${totalCost.toFixed(2)}`;  
+        `Tổng chi phí cho khách hàng ${idKhachHang} là: $${totalCost.toFixed(2)}`;  
 }
