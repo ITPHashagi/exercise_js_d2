@@ -5,7 +5,7 @@ function calculateCost() {
     var totalCost = 0;  
 
     if (loaiKhachHang === "Nhà dân") {  
-        totalCost = 4.5 + 20.5 + (7.5 * soKetNoi);  
+        totalCost = 4.5 + 20.5 + 7.5;  
     } else if (loaiKhachHang === "Doanh nghiệp") {  
         if (soKetNoi <= 10) {  
             totalCost = 15 + 75 + (50 * soKetNoi);  
